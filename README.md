@@ -11,7 +11,7 @@ This CloudFormation template creates an AWS config rule that records public AWS 
 ### Why?
 Amazon recently announced [Lambda Function URLs](https://aws.amazon.com/blogs/aws/announcing-aws-lambda-function-urls-built-in-https-endpoints-for-single-function-microservices/) which is a quick way to expose your lambda functions to the internet via an https endpoint.
 
-The problem is AWS didn't update their existing [AWS Config rule]([lambda-function-public-access-prohibited](https://docs.aws.amazon.com/config/latest/developerguide/lambda-function-public-access-prohibited.html)) that detects publicly accessible Lambdas.
+The problem is AWS didn't update their existing [lambda-function-public-access-prohibited](https://docs.aws.amazon.com/config/latest/developerguide/lambda-function-public-access-prohibited.html) rule that detects publicly accessible Lambdas.
 
 I do anticipate that AWS will update their rule or provide a new rule eventually, but in the meantime this is a blindspot.
 
