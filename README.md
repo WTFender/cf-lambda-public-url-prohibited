@@ -19,6 +19,7 @@ I do anticipate that AWS will update their rule or provide a new rule eventually
 - Config Rule
 - Lambda Function
 - Lambda IAM Role & Policy
+- (optional) Demo Lambda Functions
 
 ### Boring bits
 Below is the default policy created when you enable a public URL for a lambda function.
