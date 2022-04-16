@@ -48,12 +48,12 @@ This custom AWS config rule specifically looks for the `lambda:FunctionUrlAuthTy
 ```python
 def is_public_policy(policy):
     policy = json.loads(policy)
-    try:
-        for rule in policy['Statement']:
+    for rule in policy['Statement']:
+        try:
             if rule['Condition']['StringEquals']['lambda:FunctionUrlAuthType'] == 'NONE':
                 return True # NON_COMPLIANT
-    except KeyError:
-        pass
+        except KeyError:
+            continue
     return False # COMPLIANT
 ```
 
