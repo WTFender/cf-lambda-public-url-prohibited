@@ -140,12 +140,12 @@ Resources:
 
             def is_public_policy(policy):
                 policy = json.loads(policy)
-                try:
-                    for rule in policy['Statement']:
+                for rule in policy['Statement']:
+                    try:
                         if rule['Condition']['StringEquals']['lambda:FunctionUrlAuthType'] == 'NONE':
                             return True # NON_COMPLIANT
-                except KeyError:
-                    pass
+                    except KeyError:
+                        continue
                 return False # COMPLIANT
 
             def evaluate_change_notification_compliance(configuration_item):
